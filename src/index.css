@@ -1,3 +1,118 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg-dark: #121212;
+  --bg-card: #1e1e1e;
+  --bg-card-hover: #2a2a2a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-blue: #3b82f6;
+  --accent-red: #ef4444;
+  --accent-green: #22c55e;
+  --accent-yellow: #f59e0b;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+/* Custom button styles */
+.btn {
+  @apply px-4 py-2 rounded-md transition-all duration-200 font-medium text-sm;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-700 text-white hover:bg-gray-800;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+/* Card animations */
+.card-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* Animation for notifications */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Highlight effects */
+.highlight-pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+/* Drag and Drop styles */
+.draggable-card {
+  cursor: grab;
+}
+
+.draggable-card:active {
+  cursor: grabbing;
+}
+
+.drag-over {
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 2px dashed #3b82f6;
+}
+
+.drop-hint {
+  border: 2px solid rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+  transform: scale(1.01);
+}
+
+.drag-handle {
+  cursor: grab;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.drag-handle:hover {
+  color: #3b82f6;
+}
+
+.card-dragging {
+  opacity: 0.5;
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
