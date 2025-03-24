@@ -14,7 +14,7 @@ const rssFeeds: Record<string, string> = {
   // 3D/Mesh/Simulation focused
   // 'Blender Nation': 'https://www.blendernation.com/feed/',
   // 'CGChannel': 'https://www.cgchannel.com/feed/',
-  // 'CG Society': 'https://feeds.feedburner.com/CGSociety',
+  'CG Society': 'https://feeds.feedburner.com/CGSociety',
   'Unity Blog': 'https://blog.unity.com/api/rss/feed?source=blog',
   'Unreal Engine Blog': 'https://www.unrealengine.com/en-US/blog-rss',
   'Houdini Blog': 'https://www.sidefx.com/feed/',
