@@ -3,7 +3,7 @@
 A simple news feed built in less than two hours entirely using Cursor Chatbot and Bolt! 
 
 
-![News Feed](/screenshot.png)
+![News Feed](/news-feed.gif)
 
 ## Features
 
